@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Scheduling Algorithms Web Page</title>
+</head>
+
+<body>
+
     <h1>Process Scheduling Algorithms Web Page</h1>
 
     <p>Welcome to the Process Scheduling Algorithms web page! This page provides a comprehensive overview of several process scheduling algorithms commonly used in computer science. You can access the live page <a href="https://schedulingalgorithms.netlify.app/" target="_blank">here</a>.</p>
@@ -23,3 +35,7 @@
 
     <h2>License</h2>
     <p>This project is licensed under the <a href="LICENSE" target="_blank">MIT License</a>.</p>
+
+</body>
+
+</html>
