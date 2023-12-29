@@ -15,12 +15,6 @@
 <h2>Usage</h2>
     <p>Simply navigate to <a href="https://schedulingalgorithms.netlify.app/" target="_blank">https://schedulingalgorithms.netlify.app/</a> to explore the interactive visualization of these scheduling algorithms.</p>
 
-<h2>Contributing</h2>
-    <p>If you have suggestions, improvements, or would like to contribute to this project, feel free to fork the repository and submit a pull request.</p>
-
-<h2>Issues</h2>
-    <p>If you encounter any issues or have questions, please open an issue on the GitHub repository.</p>
-
 <h2>License</h2>
-    <p>This project is licensed under the <a href="LICENSE" target="_blank">MIT License</a>.</p>
+<p>This project is protected by copyright law. All rights are reserved. Any unauthorized use, reproduction, or distribution is strictly prohibited.</p>
 
