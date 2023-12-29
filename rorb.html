@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Round Robin Scheduling Algorithm</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <nav>
+        <h2>Scheduling Algorithms</h2><br>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sjf_p.html">SJF preempted Scheduling Algorithm</a></li>
+          <li><a href="sjf_np.html">SJF Non-preempted Scheduling Algorithm</a></li>
+          <li><a href ="rorb.html" class="active">Round Robin Scheduling Algorithm</a></li>
+          <li><a href="prpm.html">Priority preempted Scheduling Algorithm</a></li>
+          <li><a href="prnp.html">Priority preempted Scheduling Algorithm</a></li>
+          <li><a href="ljfp.html">LJF preempted Scheduling Algorithm</a></li>
+          <li><a href="ljfnp.html">LJF Non-preempted Scheduling Algorithm</a></li>
+			    <li><a href="fcfs.html">FCFS Scheduling Algorithm</a></li>
+          <li><a href="hrrn.html">Highest Response Ration Next - HRRN </a></li>
+        </ul>
+      </nav>
+    <div style="margin-left: 370px;padding: 20px;">
+        <h1 style="text-align: center;">Round Robin Scheduling Algorithm</h1>
+        <p style="text-align: center;">Round Robin is a CPU scheduling algorithm where each process is assigned a fixed time slot in a cyclic way. It is basically the preemptive version of First come First Serve CPU Scheduling algorithm.<br> 
+          Round Robin CPU Algorithm generally focuses on Time Sharing technique. <br>
+          The period of time for which a process or job is allowed to run in a pre-emptive method is called time quantum. <br>
+          Each process or job present in the ready queue is assigned the CPU for that time quantum, if the execution of the process is completed during that time <br> then the process will end else the process will go back to the waiting table and wait for its next turn to complete the execution. </p>
+        <p style="margin: 0.5em 0;"> - This page demonstrates the Round Robin Scheduling Algorithm using JavaScript.</p>
+        <p style="margin: 0.5em 0;"> - Do's and Dont's</p>
+        <ul>
+          <li>Do not enter special characters or symbols</li>
+          <li>Enter required input specified</li>
+          <li>Burst times and Time quantums must not be zero</li>
+        </ul>
+        <br>
+        <hr>
+        <br>
+        <form id = "rorb-form">
+          <label for="process-count">Number of Processes :</label>
+          <input type="number" class= "inout_style" id="process-count" name="process-count" min="1" required><br><br>
+         <label for="quantum">Enter time quantum : <input type="number" class="inout_style" id = "quantum" name="quantum" min = "1" required></label><br><br>
+          <input type="submit" class= "inout_style" value="Generate Fields">
+        </form>
+        <br>
+        <h3>Process Information</h3>
+        <table id="processes">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Arrival Time</th>
+              <th>Burst Time</th>
+            </tr>
+          </thead>
+          <tbody ></tbody>
+        </table>
+        <br>
+        <button style = "text-align: right;" class= "inout_style" id="calculate-btn">Schedule</button>
+          <h2 id = "interrupt" style="text-align: center;"></h3>
+        <br>
+        <br>
+        <hr>
+        <h3>Gantt Chart</h3>
+        <table id="gantt-chart" style="border-collapse: collapse;"">
+            <thead>
+                <tr>
+                    <th>Process</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <br><br>
+        <hr>
+        <h3>Results Table</h3>
+        <table id="result-table" style="border-collapse: collapse;"">
+          <thead>
+              <tr>
+                  <th>Process</th>
+                  <th>Arrival Time</th>
+                  <th>Burst Time</th>
+                  <th>Completion Time</th>
+                  <th>Turnaround Time</th>
+                  <th>Waiting Time</th>
+              </tr>
+          </thead>
+          <tbody></tbody>
+          <tfoot>
+              <tr>
+                  <td colspan="5">Average Waiting Time:</td>
+                  <td id="avg-wt"></td>
+              </tr>
+              <tr>
+                <td colspan="5">Average Turnaround Time:</td>
+                  <td id="avg-tat"></td>
+              </tr>
+          </tfoot>
+      </table>
+    </div>
+  <script src="rorb.js"></script>
+</main>
+    </body>
+  </html>

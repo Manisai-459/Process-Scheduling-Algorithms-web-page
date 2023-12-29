@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FCFS Scheduling Algorithm</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <nav>
+        <h2>Scheduling Algorithms</h2><br>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sjf_p.html">SJF preempted Scheduling Algorithm</a></li>
+          <li><a href="sjf_np.html">SJF Non-preempted Scheduling Algorithm</a></li>
+          <li><a href ="rorb.html">Round Robin Scheduling Algorithm</a></li>
+          <li><a href="prpm.html">Priority preempted Scheduling Algorithm</a></li>
+          <li><a href="prnp.html">Priority preempted Scheduling Algorithm</a></li>
+          <li><a href="ljfp.html">LJF preempted Scheduling Algorithm</a></li>
+          <li><a href="ljfnp.html" >LJF Non-preempted Scheduling Algorithm</a></li>
+			    <li><a href="fcfs.html" class="active">FCFS Scheduling Algorithm</a></li>
+          <li><a href="hrrn.html">Highest Response Ration Next - HRRN </a></li>
+        </ul>
+      </nav>
+    <div style="margin-left: 370px;padding: 20px;">
+        <h1 style="text-align: center;">FCFS Scheduling Algorithm</h1>
+        <p style="text-align: center;">Simplest CPU scheduling algorithm that schedules according to arrival times of processes. First come first serve scheduling algorithm states that the process that requests the CPU first is allocated the CPU first. It is implemented by using the FIFO queue. When a process enters the ready queue, its PCB is linked to the tail of the queue. <br>When the CPU is free, it is allocated to the process at the head of the queue. The running process is then removed from the queue. FCFS is a non-preemptive scheduling algorithm.</p>
+        <p style="margin: 0.5em 0;"> - This page demonstrates the FCFS Scheduling Algorithm using JavaScript.</p>
+        <p style="margin: 0.5em 0;"> - Do's and Dont's</p>
+        <ul>
+          <li>Do not enter special characters or symbols</li>
+          <li>Enter required input specified</li>
+          <li>Burst times must not be zero</li>
+        </ul>
+        <br>
+        <hr>
+        <br>
+        <form id = "fcfs-form">
+          <label for="process-count">Number of Processes:</label>
+          <input type="number" class= "inout_style" id="process-count" name="process-count" min="1" required>
+          <input type="submit" class= "inout_style" value="Generate Fields">
+        </form>
+        <br>
+        <h3>Process Information</h3>
+        <table id="processes">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Arrival Time</th>
+              <th>Burst Time</th>
+            </tr>
+          </thead>
+          <tbody ></tbody>
+        </table>
+        <br>
+        <button style = "text-align: right;" class= "inout_style" id="calculate-btn">Schedule</button>
+          <h2 id = "interrupt" style="text-align: center;"></h3>
+        <br>
+        <br>
+        <hr>
+        <h3>Gantt Chart</h3>
+        <table id="gantt-chart" style="border-collapse: collapse;"">
+            <thead>
+                <tr>
+                    <th>Process</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <br><br>
+        <hr>
+        <h3>Results Table</h3>
+        <table id="result-table" style="border-collapse: collapse;"">
+          <thead>
+              <tr>
+                  <th>Process</th>
+                  <th>Arrival Time</th>
+                  <th>Burst Time</th>
+                  <th>Completion Time</th>
+                  <th>Turnaround Time</th>
+                  <th>Waiting Time</th>
+              </tr>
+          </thead>
+          <tbody></tbody>
+          <tfoot>
+              <tr>
+                  <td colspan="5">Average Waiting Time:</td>
+                  <td id="avg-wt"></td>
+              </tr>
+              <tr>
+                <td colspan="5">Average Turnaround Time:</td>
+                  <td id="avg-tat"></td>
+              </tr>
+          </tfoot>
+      </table>
+    </div>
+  <script src="fcfs.js"></script>
+</main>
+    </body>
+  </html>

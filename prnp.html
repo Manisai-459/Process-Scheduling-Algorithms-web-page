@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Priority Scheduling Algorithm</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <nav>
+        <h2>Scheduling Algorithms</h2><br>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sjf_p.html">SJF preempted Scheduling Algorithm</a></li>
+          <li><a href="sjf_np.html">SJF Non-preempted Scheduling Algorithm</a></li>
+          <li><a href ="rorb.html">Round Robin Scheduling Algorithm</a></li>
+          <li><a href="prpm.html" >Priority preempted Scheduling Algorithm</a></li>
+          <li><a href="prnp.html" class="active">Priority preempted Scheduling Algorithm</a></li>
+          <li><a href="ljfp.html">LJF preempted Scheduling Algorithm</a></li>
+          <li><a href="ljfnp.html">LJF Non-preempted Scheduling Algorithm</a></li>
+			    <li><a href="fcfs.html">FCFS Scheduling Algorithm</a></li>
+          <li><a href="hrrn.html">Highest Response Ration Next - HRRN </a></li>
+        </ul>
+      </nav>
+    <div style="margin-left: 370px;padding: 20px;">
+        <h1 style="text-align: center;">Priority Scheduling Algorithm  &nbsp Non - Preemptive</h1>
+        <p style="text-align: center;">Non - Preemptive Priority CPU Scheduling Algorithm is a non - preemptive method of CPU scheduling algorithm that works based on the priority of a process.<br> In this algorithm, the scheduler schedules the tasks to work as per the priority, which means that a higher priority process should be executed first. In case of any conflict, i.e., when there is more than one process with equal priorities, then the pre-emptive priority CPU scheduling algorithm works on the basis of FCFS (First Come First Serve) algorithm. </p>
+        <p style="margin: 0.5em 0;"> - Process with highest Priority ( in Magnitude ) is executed First</p>
+        <p style="margin: 0.5em 0;"> - This page demonstrates the Preemptive scheduling algorithm using JavaScript.</p>
+        <p style="margin: 0.5em 0;"> - Do's and Dont's</p>
+        <ul>
+          <li>Do not enter special characters or symbols</li>
+          <li>Enter required input specified</li>
+          <li>Burst times can not be zero</li>
+        </ul>
+        <br>
+        <hr>
+        <br>
+        <form id = "prnp-form">
+          <label for="process-count">Number of Processes:</label>
+          <input type="number" class= "inout_style" id="process-count" name="process-count" min="1" required>
+          <input type="submit" class= "inout_style" value="Generate Fields">
+        </form>
+        <br>
+        <h3>Process Information</h3>
+        <table id="processes">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Arrival Time</th>
+              <th>Burst Time</th>
+              <th>Priority</th>
+            </tr>
+          </thead>
+          <tbody ></tbody>
+        </table>
+        <br>
+        <button style = "text-align: right;" class= "inout_style" id="calculate-btn">Schedule</button>
+          <h2 id = "interrupt" style="text-align: center;"></h3>
+        <br>
+        <br>
+        <hr>
+        <h3>Gantt Chart</h3>
+        <table id="gantt-chart" style="border-collapse: collapse;"">
+            <thead>
+                <tr>
+                    <th>Process</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <br><br>
+        <hr>
+        <h3>Results Table</h3>
+        <table id="result-table" style="border-collapse: collapse;"">
+          <thead>
+              <tr>
+                  <th>Process</th>
+                  <th>Arrival Time</th>
+                  <th>Burst Time</th>
+                  <th>Priority</th>
+                  <th>Completion Time</th>
+                  <th>Turnaround Time</th>
+                  <th>Waiting Time</th>
+              </tr>
+          </thead>
+          <tbody></tbody>
+          <tfoot>
+              <tr>
+                  <td colspan="6">Average Waiting Time:</td>
+                  <td id="avg-wt"></td>
+              </tr>
+              <tr>
+                <td colspan="6">Average Turnaround Time:</td>
+                  <td id="avg-tat"></td>
+              </tr>
+          </tfoot>
+      </table>
+    </div>
+  <script src="prnp.js"></script>
+</main>
+    </body>
+  </html>
